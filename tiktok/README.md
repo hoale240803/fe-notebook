@@ -109,3 +109,11 @@ Create .prettierrc
     "vueIndentScriptAndStyle": false
 }
 ```
+
+## 3. Cấu hình css, scss
+
+```
+<GlobalStyles>
+    <App />
+</GlobalStyles>
+```
