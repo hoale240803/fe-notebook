@@ -149,3 +149,25 @@ npm i react-router-dom
 ```
 
 3. Xây dựng cơ chế tải layout
+
+## 5. Dựng khung DefaultLayout dự án Tiktok clone
+
+## 6. Xây dựng UI phần Header dự án Tiktok
+
+## 7. Xây dựng Logic phần Header dự án tiktok
+
+## 8. Sử dụng tư viện Axios | Gọi API từ trình duyệt hoặc Nodejs
+
+## 9. Sửa lỗi và hoàn thiện phần Header
+
+## 10. Tái cấu trúc và tối ưu code
+
+## 11. Tìm hiểu và ứng dụng thư viện PropTypes trong React
+
+## 12. Áp dụng PropTypes vào dự án Tiktok Clone
+
+## 13. Khắc phục vấn đề nhiều File index.js
+
+## 14. Tối ưu Header dự án tiktok
+
+## 15. Xây dựng UI phần Sidebar
