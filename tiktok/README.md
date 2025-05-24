@@ -134,4 +134,18 @@ npm install --save normalize.css
 
 4. Default css: font-family, font-size, line-height
 
-## 4. Cau
+## 4. Cấu hình router
+
+1. Phân tích tổng quan layout
+
+-Navbar:
+-Sidebar:
+-Main Layout: 3-4 cái
+
+2. Cài đặt react-router-dom
+
+```
+npm i react-router-dom
+```
+
+3. Xây dựng cơ chế tải layout

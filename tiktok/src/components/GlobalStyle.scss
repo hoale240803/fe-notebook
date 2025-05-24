@@ -9,8 +9,14 @@ html {
     font-size: 62.5%;
 }
 
+* {
+    box-sizing: border-box;
+    color: black;
+}
+
 body {
     font-size: 1.6rem;
     font-family: 'Roboto', 'San-serif';
+    line-height: 1.5rem;
     text-rendering: optimizeSpeed;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import GlobalStyles from '~/component/GlobalStyle';
+import GlobalStyles from '~/components/GlobalStyle';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
