@@ -112,8 +112,26 @@ Create .prettierrc
 
 ## 3. Cấu hình css, scss
 
+1. Tạo GlobalStyles component
+
+2. Cài thư viện scss
+
+```
+npm i sass -D
+```
+
+3. Reset css:
+
+```
+npm install --save normalize.css
+```
+
 ```
 <GlobalStyles>
     <App />
 </GlobalStyles>
 ```
+
+4. Default css: font-family, font-size, line-height
+
+## 4. Cau

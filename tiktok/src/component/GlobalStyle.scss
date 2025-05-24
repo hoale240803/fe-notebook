@@ -1,7 +1,16 @@
-* {
-    color: black;
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary: #fe2c55;
 }
 
-.App {
-    color: black;
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Roboto', 'San-serif';
+    text-rendering: optimizeSpeed;
 }
