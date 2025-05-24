@@ -150,7 +150,14 @@ npm i react-router-dom
 
 3. Xây dựng cơ chế tải layout
 
+-   check layout null
+
 ## 5. Dựng khung DefaultLayout dự án Tiktok clone
+
+-   Responsive trên pc
+    -   Thừa nhiều thể không dùng
+    -   Code vừa cho pc, mobile bị rối và phức tạp
+-
 
 ## 6. Xây dựng UI phần Header dự án Tiktok
 

@@ -1,4 +1,14 @@
-const { override, useBabelRc } = require("customize-cra");
+const { override, useBabelRc, adjustStyleLoaders } = require('customize-cra');
 
-// eslint-disable-next-line react-hooks/rules-of-hooks
-module.exports = override(useBabelRc());
+module.exports = override(
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useBabelRc(),
+    adjustStyleLoaders(({ use: [, , postcss, resolve, sass] }) => {
+        if (sass) {
+            sass.options.sassOptions = {
+                // Use the modern JS API
+                api: 'modern-compiler',
+            };
+        }
+    }),
+);
