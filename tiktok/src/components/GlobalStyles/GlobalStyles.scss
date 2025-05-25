@@ -3,27 +3,43 @@
 
 :root {
     --primary: #fe2c55;
-    --black: rgba(22, 24, 25, 0.06);
-    --text-color: #f8f8f8;
+    --black: #000;
+    --white: #000;
+    --text-color: #161823;
+    --font-family: 'ProximaNova', sans-serif;
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 62.5%;
 }
 
-* {
-    box-sizing: border-box;
-    color: black;
-}
-
 body {
+    font-family: var(--font-family);
     font-size: 1.6rem;
-    font-family: 'Roboto', 'San-serif';
     line-height: 1.5rem;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
+    overflow-y: overlay;
+}
+
+// Scrollbar css
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--black);
 }
 
 button,

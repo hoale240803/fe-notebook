@@ -5,11 +5,10 @@ import classNames from 'classnames/bind';
 import { forwardRef, useEffect, useState } from 'react';
 import images from '~/assets/images';
 import Button from '~/components/Button';
-import { Wrapper as PopperWrapper } from '~/components/Layout/Popper';
+import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
-
 // Custom Tippy wrapper to handle ref forwarding
 const TippyWrapper = forwardRef(({ children, ...props }, ref) => {
     return (
