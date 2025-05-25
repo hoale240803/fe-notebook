@@ -255,11 +255,78 @@ Button.propTypes = {
 
 ## 7. Xây dựng Logic phần Header dự án tiktok
 
+**Yêu Cầu**
+
+-   Khi gõ trên thanh search thì hiển thị icon x để user có thể xóa toàn bộ text.
+
+-   Xử gõ nhiều ký tự hoặc gõ 2-3s mới request api một lần. Nếu không nó sẽ bị lag
+
+=> chúng ta sẽ dùng debouce để xác định đc là khi nào thì user nhập liệu xong. Đơn giản nó sẽ xác định đc khi nào user dừng nhập trong x time => call api để lấy dữ liệu về.
+
+-   Khi f5 thì Search bar có forcus vào search bar hay không
+-   Icon close sẽ hiện khi người dùng tìm kiếm, đang tìm kiếm thì sẽ hiển thị icon loading
+-   Khi nào outfocus khỏi search result thì sẽ ẩn đi panel đó
+-   Không có kết quả thì không hiển thị gì cả
+
+**Làm việc với API**
+
+-   install json viewer => để dễ dàng đọc json data từ be trả về
+
+Xử lý data do người dùng nhập vào
+
+-   Không có ký tự
+-   Ký tự có nhiều khoảng trắng
+-   Nhấp ký tứ đặc biết ?, &, | giống như parameter trên url => dùng encodeURIComponent() để mã hóa string truyền vào
+-   chú ý phần tìm kiếm có tình năng loadmore để tránh load toàn bộ data từ be.
+
 ## 8. Sử dụng tư viện Axios | Gọi API từ trình duyệt hoặc Nodejs
+
+Có nhiều cách để gọi api trên vs js.
+https://www.npmjs.com/package/axios
+
+-   XMLHTTPRequest trên trình duyệt
+-   Fetch
+-   Hổ trợ chuyển đổi data trước và sau khi gửi request
+    ex:
+    database hay làm việc với snake_case. js thì hay làm việc với camelCase =>
+    Cài đặt package axios
+
+```
+Make XMLHttpRequests from the browser
+Make http requests from node.js
+Supports the Promise API
+Intercept request and response
+Transform request and response data
+Cancel requests
+Automatic transforms for JSON data
+🆕 Automatic data object serialization to multipart/form-data and x-www-form-urlencoded body encodings
+Client side support for protecting against XSRF
+```
+
+```
+npm i axios
+```
+
+Tách request thành các api service để hạn chế đụng code, để tái sử dụng code.
 
 ## 9. Sửa lỗi và hoàn thiện phần Header
 
+-   Link logo về trang chủ
+-   Sửa phông chữ trong ô tìm kiếm
+-   Không cho nhập kí tự đầu tiên là space trong o tìm kiếm
+-   Bỏ qua hành vi focus vào ô tìm kiếm khi nhấn submit
+-   Không ẩn menu khi click vào avatar => truyền tham số vào hàm handleOnClick true/false
+-   Xử lý thanh cuộn trong menu đa cấp, khi có nhiều content
+-   Thêm styles overlay cho thanh cuộn body
+    => tìm keyword overlay-y
+-   Sửa title trang và update favicon
+-   Fix warning thư viện Tippy
+
 ## 10. Tái cấu trúc và tối ưu code
+
+-   apiService => services, find and replace import chú ý sau khi replace kết quả có đúng không.
+-   src/components/Layout => src/layouts
+-   routes config
 
 ## 11. Tìm hiểu và ứng dụng thư viện PropTypes trong React
 
@@ -280,5 +347,3 @@ Button.propTypes = {
 -   Đọc hiểu code mới
 -   Copy hoặc dùng nhiều lần bỏ vào trong snippets
 -   Note lại trong docs liên quan. ví dụ css, scss thì lưu lại ở blog hoặc note-book cho phần đó
-
-2.
