@@ -157,9 +157,72 @@ npm i react-router-dom
 -   Responsive trên pc
     -   Thừa nhiều thể không dùng
     -   Code vừa cho pc, mobile bị rối và phức tạp
--
 
 ## 6. Xây dựng UI phần Header dự án Tiktok
+
+-   Logo
+
+-   Search
+
+    -   Inner
+
+        -   input
+        -   close icon
+        -   loading icon
+        -   Spacer cal(var(--search-height) - var(--search-spacer) \* 2)
+
+    -   Button search
+
+-   Actions
+
+```css
+* install fontawesome
+* css to caret
+* focus the input => then clear content itself and change background color of search button
+
+```
+
+6.1 Handle tippy for search
+
+[Github](https://github.com/atomiks/tippyjs-react)
+[All props of Tippy](https://atomiks.github.io/tippyjs/v6/all-props/)
+
+-   Control search result
+
+if you're got error
+
+```
+Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release.
+```
+
+You need to wrap Tippy in to Wrapper
+
+```
+// Custom Tippy wrapper to handle ref forwarding
+const TippyWrapper = forwardRef(({ children, ...props }, ref) => {
+    return (
+        <Tippy {...props} ref={ref}>
+            {children}
+        </Tippy>
+    );
+});
+```
+
+```
+<TippyWrapper
+    interactive
+    visible={searchResult.length > 0}
+    render={(attrs) => (
+        <PopperWrapper>
+            <div className="box" tabIndex="-1" {...attrs}>
+                Kết quả
+            </div>
+        </PopperWrapper>
+    )}
+>
+    {/* Your Search component */}
+</TippyWrapper>
+```
 
 ## 7. Xây dựng Logic phần Header dự án tiktok
 
