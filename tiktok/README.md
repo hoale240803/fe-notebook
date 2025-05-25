@@ -224,6 +224,35 @@ const TippyWrapper = forwardRef(({ children, ...props }, ref) => {
 </TippyWrapper>
 ```
 
+6.2 Phân tích nút
+
+-   có thể gom nhiều nút của UI design về cùng một component để xài chung không
+-   Nếu có thì phân biệt nó như primary, outline, link buton, icon button
+-   Nếu nó đặt sát nhau thì có cách nhau ra hay dính liền vào nhau
+-   Nếu nút click vào muốn mở sang tab mới
+-   size của nút là small, medium hay là large
+-   nội dung bên trong button của nó là gì
+-   Disabled hay không
+
+```
+Button.propTypes = {
+    to: PropTypes.string,
+    href: PropTypes.string,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    text: PropTypes.bool,
+    rounded: PropTypes.bool,
+    disabled: PropTypes.bool,
+    small: PropTypes.bool,
+    large: PropTypes.bool,
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.node,
+    onClick: PropTypes.func,
+};
+```
+
 ## 7. Xây dựng Logic phần Header dự án tiktok
 
 ## 8. Sử dụng tư viện Axios | Gọi API từ trình duyệt hoặc Nodejs
@@ -241,3 +270,15 @@ const TippyWrapper = forwardRef(({ children, ...props }, ref) => {
 ## 14. Tối ưu Header dự án tiktok
 
 ## 15. Xây dựng UI phần Sidebar
+
+## Extension
+
+1. Cách xử lý khi gặp vấn đề
+
+-   Gặp vấn đề
+-   Search keyword error
+-   Đọc hiểu code mới
+-   Copy hoặc dùng nhiều lần bỏ vào trong snippets
+-   Note lại trong docs liên quan. ví dụ css, scss thì lưu lại ở blog hoặc note-book cho phần đó
+
+2.
