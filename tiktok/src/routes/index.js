@@ -6,8 +6,6 @@ const publicRoutes = [
     { path: '/', component: Home },
     { path: '/profile', component: Profile },
     { path: '/following', component: Following },
-    { path: '/live', component: Live },
-    { path: '/live', component: Live },
 ];
 
 const privateRoutes = [];

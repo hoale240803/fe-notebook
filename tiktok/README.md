@@ -326,17 +326,34 @@ Tách request thành các api service để hạn chế đụng code, để tái
 
 -   apiService => services, find and replace import chú ý sau khi replace kết quả có đúng không.
 -   src/components/Layout => src/layouts
--   routes config
+-   routes config => Nếu sau này config có nhiều có cấu hình hơn.
 
 ## 11. Tìm hiểu và ứng dụng thư viện PropTypes trong React
 
+Validate kiểu dự liệu với component để tránh truyền sai kiểu data.
+
 ## 12. Áp dụng PropTypes vào dự án Tiktok Clone
 
+children of each components
+
+Để một componet chỉ nhận một con thì nó React.Children.Only
+
+```
+
+```
+
+Clean code
+https://github.com/ryanmcdermott/clean-code-javascript
+
 ## 13. Khắc phục vấn đề nhiều File index.js
+
+-   tạo file trùng tên với tên của component, tạo index.js để export default component đó ra
 
 ## 14. Tối ưu Header dự án tiktok
 
 ## 15. Xây dựng UI phần Sidebar
+
+
 
 ## Extension
 
